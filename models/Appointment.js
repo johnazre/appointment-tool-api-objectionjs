@@ -26,12 +26,11 @@ class Appointment extends Model {
   static get jsonSchema() {
     return {
       type: 'object',
-      required: ['user_one', 'location'],
+      required: ['time', 'location'],
 
       properties: {
         id: { type: 'integer' },
-        user_one: { type: 'integer' },
-        user_two: { type: 'integer' },
+        time: { type: 'string' },
         location: { type: 'string', minLength: 1, maxLength: 255 }
       }
     }
